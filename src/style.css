@@ -302,15 +302,16 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.fourth-cont .container .cont-right,.cont-left {
-    max-width: 60%;
-    /* background-color: aqua; */
+
+.fourth-cont .container .cont-right {
+    width: 60%;
 }
+
 .fourth-cont .container .cont-right {
     /* background-color: blue; */
     padding:70px 0px 0px 70px;
 }
-.fourth-cont .container .cont-left img {
+.fourth-cont .container img {
     width: 350px
     
 }
@@ -343,6 +344,34 @@ body {
     color: #533375;
     background-color: #FFD000;
     font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .fourth-cont .container .cont-right {
+        width: 100%;
+    }
+
+    .fourth-cont .container  {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .fourth-cont .container .cont-right {
+       width: 600px;
+       margin: 0 auto;
+       padding: 20px 60px;
+    }
+    .fourth-cont .container .cont-right h2 {
+        font-size: 32px;
+    }
+    .fourth-cont .container .cont-right h3 {
+        font-size: 32px;
+    }
+    .fourth-cont .container .cont-right p{
+        width: 100%;
+    }
+    .fourth-cont .container button {
+        margin: 0 auto;
+    }
 }
 
 /* final do QUARTO CONTAINER */
