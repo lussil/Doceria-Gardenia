@@ -15,22 +15,32 @@
 </head>
 <body>
     <!-- Começo do header -->
-    <header>
-        <div class="container">
-       <a href="#"><img class="logo" src="src/img/logo-gardênia.png" alt="Logo da gardenia"></a>
-        <nav>
-            <ul>
-                <li><a href="index.html">inicio</a></li>
-                <li><a href="contato.html">contato</a></li>
-                <li><a href="quemSomos.html">quem somos</a></li>
-                <li><a href="produtos.html">produtos</a></li>
-                <li><a href="promocao.html">promoção</a></li>
-                <li><a href="carrinho.html">
-                    <img class="carrinho" src="src/img/icon-carrinho.png" alt="carrinho">
-                </a></li>
-            </ul>
-        </nav>
-    </div>
+    <header id="header">
+      <a id="logo" href="">
+        <img id="logo" src="src/img/logo-gardênia.png" alt="" />
+      </a>
+      <nav id="nav">
+        <button
+          id="btn-mobile"
+          aria-label="Abrir menu"
+          aria-haspopup="true"
+          aria-controls="menu"
+          aria-expanded="false"
+        >
+          <span id="hamburger"></span>
+          <script src="script.js"></script>
+        </button>
+        <ul id="menu" role="menu">
+          <li><a href="/">inicio</a></li>
+          <li><a href="/">quem somos</a></li>
+          <li><a href="/">produtos</a></li>
+          <li><a href="/">promoção</a></li>
+          <li><a href="/">contato</a></li>
+          <li>
+            <a href="/"><img src="src/img/icon-carrinho.png" alt="" srcset="" /></a>
+          </li>
+        </ul>
+      </nav>
     </header>
     <br>
     <!-- Final do header -->
@@ -85,43 +95,75 @@
             <h2>Produtos</h2>
             <article class="container">
                 
-                <div class="card">
-                    <img class="card-img-top" src="src/img/chocotone.png" alt="Card image cap">
-                    <div class="card-body">
-                      <h5>Chocotone</h5>
-                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum </p>
-                    </div>
-                    <div class="card-footer">
-                      <p>R$ 10,00</p>
-                      <p>Contador</p>
-                    </div>
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="https://blog.novasafra.com.br/wp-content/uploads/2019/01/264597-aprenda-como-fazer-chocotone-e-por-que-investir-nesse-produto.jpg"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <h5>Chocotone</h5>
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting
+                    industry. Lorem Ipsum
+                  </p>
+                </div>
+                <div class="card-footer">
+                  <p>R$ 10,00</p>
+                  <div class="quantity">
+                    <button id="sub">-</button>
+                    <input type="text" id="qtyBox" value="0" />
+                    <button id="add">+</button>
                   </div>
+                </div>
+              </div>
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="https://blog.novasafra.com.br/wp-content/uploads/2019/01/264597-aprenda-como-fazer-chocotone-e-por-que-investir-nesse-produto.jpg"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <h5>Chocotone</h5>
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting
+                    industry. Lorem Ipsum
+                  </p>
+                </div>
+                <div class="card-footer">
+                  <p>R$ 10,00</p>
+                  <div class="quantity">
+                    <button id="sub">-</button>
+                    <input type="text" id="qtyBox" value="0" />
+                    <button id="add">+</button>
+                  </div>
+                </div>
+              </div>
                   <div class="card">
-                    <img class="card-img-top" src="src/img/chocotone.png" alt="Card image cap">
+                    <img
+                      class="card-img-top"
+                      src="https://blog.novasafra.com.br/wp-content/uploads/2019/01/264597-aprenda-como-fazer-chocotone-e-por-que-investir-nesse-produto.jpg"
+                      alt="Card image cap"
+                    />
                     <div class="card-body">
                       <h5>Chocotone</h5>
-                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum </p>
+                      <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting
+                        industry. Lorem Ipsum
+                      </p>
                     </div>
                     <div class="card-footer">
                       <p>R$ 10,00</p>
-                      <p>Contador</p>
+                      <div class="quantity">
+                        <button id="sub">-</button>
+                        <input type="text" id="qtyBox" value="0" />
+                        <button id="add">+</button>
+                      </div>
                     </div>
                   </div>
-                  <div class="card">
-                    <img class="card-img-top" src="src/img/chocotone.png" alt="Card image cap">
-                    <div class="card-body">
-                      <h5>Chocotone</h5>
-                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum </p>
-                    </div>
-                    <div class="card-footer">
-                      <p>R$ 10,00</p>
-                      
-                      <button id="btn_decrementar" type="button">-</button> 
-                      <h1 id="contador"></h1>
-                      <button id="btn_incrementar" type="button">+</button>
-                      <script src="script.js"></script>
-                    </div>
-                  </div>
+              
+                  <br />
+              
                 
             </article>
             <a href="">mais produtos</a>
@@ -224,26 +266,7 @@
     
     </section>
     
-    <script>
-    var slideIndex = 1;
-    showDivs(slideIndex);
-    
-    function plusDivs(n) {
-      showDivs(slideIndex += n);
-    }
-    
-    function showDivs(n) {
-      var i;
-      var x = document.getElementsByClassName("mySlides");
-      if (n > x.length) {slideIndex = 1}
-      if (n < 1) {slideIndex = x.length}
-      for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";  
-      }
-      x[slideIndex-1].style.display = "block";  
-    }
-    </script>
-
+  
 <!-- Começo do footer -->
     <footer>
         <section class="container">
@@ -288,6 +311,68 @@
         
     </section>
     <!-- Final do copy -->
+
+    <script>
+      /*Slideshow dos comentários*/
+      var slideIndex = 1;
+      showDivs(slideIndex);
+      
+      function plusDivs(n) {
+        showDivs(slideIndex += n);
+      }
+      
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";  
+        }
+        x[slideIndex-1].style.display = "block";  
+      }
+
+      /*Botão contador dentro dos cards*/
+      let addBtn = document.querySelector('#add');
+                    let subBtn = document.querySelector('#sub');
+                    let qty = document.querySelector('#qtyBox');
+              
+                    addBtn.addEventListener('click', ()=>{
+                      qty.value = parseInt(qty.value) + 1;
+                    });
+              
+                    subBtn.addEventListener('click',()=>{
+                      if (qty.value <= 0) {
+                        qty.value = 0;
+                      }
+                      else{
+                        qty.value = parseInt(qty.value) -1;
+                      }
+                    });
+
+ /*Menu Hamburguer*/
+const btnMobile = document.getElementById("btn-mobile");
+
+function toggleMenu(event) {
+  if (event.type === "touchstart") event.preventDefault();
+  const nav = document.getElementById("nav");
+  nav.classList.toggle("active");
+  const active = nav.classList.contains("active");
+  event.currentTarget.setAttribute("aria-expanded", active);
+  if (active) {
+    event.currentTarget.setAttribute("aria-label", "fechar menu");
+  } else {
+    event.currentTarget.setAttribute("aria-label", "abrir menu");
+  }
+}
+
+btnMobile.addEventListener("click", toggleMenu);
+btnMobile.addEventListener("touchstart", toggleMenu);
+
+
+      </script>
+  
+
 </body>
 </html>
 
