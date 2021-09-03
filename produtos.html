@@ -14,23 +14,33 @@
     <title>Produtos Doceria Gardenia</title>
 </head>
 <body>
-    <header>
-        <div class="container">
-       <a href="index.html"><img class="logo" src="src/img/logo-gardênia.png" alt="Logo da gardenia"></a>
-        <nav>
-            <ul>
-                <li><a href="index.html">inicio</a></li>
-                <li><a href="contato.html">contato</a></li>
-                <li><a href="quemSomos.html">quem somos</a></li>
-                <li><a href="produtos.html">produtos</a></li>
-                <li><a href="promocao.html">promoção</a></li>
-                <li><a href="carrinho.html">
-                    <img class="carrinho" src="src/img/icon-carrinho.png" alt="carrinho">
-                </a></li>
-            </ul>
+    <header id="header" class="header">
+        <a id="logo" class="logo" href="">
+          <img id="logo" class="logo" src="src/img/logo-gardênia.png" alt="" />
+        </a>
+        <nav id="nav" class="nav">
+          <button
+            id="btn-mobile" class="btn-mobile"
+            aria-label="Abrir menu"
+            aria-haspopup="true"
+            aria-controls="menu"
+            aria-expanded="false"
+          >
+            <span id="hamburger" class="hamburguer"></span>
+            <script src="script.js"></script>
+          </button>
+          <ul id="menu" class="menu" role="menu">
+            <li><a href="index.html">inicio</a></li>
+            <li><a href="quemSomos.html">quem somos</a></li>
+            <li><a href="produtos.html">produtos</a></li>
+            <li><a href="promocao.html">promoção</a></li>
+            <li><a href="contato.html">contato</a></li>
+            <li>
+              <a href="carrinho.html"><img src="src/img/icon-carrinho.png" alt="" srcset="" /></a>
+            </li>
+          </ul>
         </nav>
-    </div>
-    </header>
+      </header>
     <br>
     <h1 style="text-align: center;">Produtos</h1>
     <br>
@@ -77,5 +87,28 @@
         
     </section>
     <!-- Final do copy -->
+
+    <script>
+        /*Menu Hamburguer*/
+const btnMobile = document.getElementById("btn-mobile");
+
+function toggleMenu(event) {
+ if (event.type === "touchstart") event.preventDefault();
+ const nav = document.getElementById("nav");
+ nav.classList.toggle("active");
+ const active = nav.classList.contains("active");
+ event.currentTarget.setAttribute("aria-expanded", active);
+ if (active) {
+   event.currentTarget.setAttribute("aria-label", "fechar menu");
+ } else {
+   event.currentTarget.setAttribute("aria-label", "abrir menu");
+ }
+}
+
+btnMobile.addEventListener("click", toggleMenu);
+btnMobile.addEventListener("touchstart", toggleMenu);
+
+
+   </script>
 </body>
 </html>
