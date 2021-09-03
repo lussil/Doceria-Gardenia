@@ -14,22 +14,22 @@
     <title> Promoção Doceria Gardenia</title>
 </head>
 <body>
-    <header id="header">
-        <a id="logo" href="">
-          <img id="logo" src="src/img/logo-gardênia.png" alt="" />
+    <header id="header" class="header">
+        <a id="logo" class="logo" href="">
+          <img id="logo" class="logo" src="src/img/logo-gardênia.png" alt="" />
         </a>
-        <nav id="nav">
+        <nav id="nav" class="nav">
           <button
-            id="btn-mobile"
+            id="btn-mobile" class="btn-mobile"
             aria-label="Abrir menu"
             aria-haspopup="true"
             aria-controls="menu"
             aria-expanded="false"
           >
-            <span id="hamburger"></span>
+            <span id="hamburger" class="hamburguer"></span>
             <script src="script.js"></script>
           </button>
-          <ul id="menu" role="menu">
+          <ul id="menu" class="menu" role="menu">
             <li><a href="index.html">inicio</a></li>
             <li><a href="quemSomos.html">quem somos</a></li>
             <li><a href="produtos.html">produtos</a></li>
@@ -87,5 +87,27 @@
         
     </section>
     <!-- Final do copy -->
+    <script>
+        /*Menu Hamburguer*/
+const btnMobile = document.getElementById("btn-mobile");
+
+function toggleMenu(event) {
+ if (event.type === "touchstart") event.preventDefault();
+ const nav = document.getElementById("nav");
+ nav.classList.toggle("active");
+ const active = nav.classList.contains("active");
+ event.currentTarget.setAttribute("aria-expanded", active);
+ if (active) {
+   event.currentTarget.setAttribute("aria-label", "fechar menu");
+ } else {
+   event.currentTarget.setAttribute("aria-label", "abrir menu");
+ }
+}
+
+btnMobile.addEventListener("click", toggleMenu);
+btnMobile.addEventListener("touchstart", toggleMenu);
+
+
+   </script>
 </body>
 </html>
