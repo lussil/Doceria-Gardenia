@@ -8,7 +8,7 @@ body {
 
 /* Começo do HEADER */
 
-#header {
+.header {
     box-sizing: border-box;
     height: 140px;
     padding: 1rem 5rem;
@@ -18,25 +18,25 @@ body {
     background-color: #533375;
 }
 
-#header a {
+.header a {
     color: #ffd000;
     text-decoration: none;
     font-family: sans-serif;
   }
   
-  #header #logo {
+  .header #logo {
     font-size: 1.5rem;
     font-weight: bold;
   }
   
  
-  #header ul li a img {
+  .header ul li a img {
     width: 25px;
   }
-  #header a img {
+  .header a img {
     max-width: 100px;
   }
-  #header ul li a:hover {
+  .header ul li a:hover {
     color: #ffd000;
     font-weight: bold;
     letter-spacing: 1.5px;
@@ -44,13 +44,13 @@ body {
     text-transform: uppercase;
   }
   
-  #header #menu {
+  .header #menu {
     display: flex;
     list-style: none;
     gap: 0.5rem;
   }
   
-  #header #menu a {
+  .header #menu a {
     display: block;
     padding: 0.5rem;
     font-weight: lighter;
@@ -59,13 +59,13 @@ body {
     text-transform: lowercase;
   }
   
-  #header #btn-mobile {
+  .header #btn-mobile {
     display: none;
     color: #ffd000;
   }
   
   @media (max-width: 600px) {
-    #header #menu {
+    .header #menu {
       display: block;
       position: absolute;
       width: 100%;
@@ -78,17 +78,17 @@ body {
       visibility: hidden;
       overflow-y: hidden;
     }
-    #header #nav.active #menu {
+    .header #nav.active #menu {
       height: calc(100vh - 105px);
       visibility: visible;
       overflow-y: auto;
     }
-    #header #menu a {
+    .header #menu a {
       padding: 1rem 4rem;
       margin: 0 1rem;
       border-bottom: 2px solid rgba(0, 0, 0, 0.05);
     }
-    #header #btn-mobile {
+    .header #btn-mobile {
       display: flex;
       padding: 0.5rem 1rem;
       font-size: 1rem;
@@ -97,12 +97,12 @@ body {
       gap: 0.5rem;
       border: none;
     }
-    #header #hamburger {
+    .header #hamburger {
       width: 20px;
       border-top: 2px solid;
     }
-    #header #hamburger::after,
-    #header #hamburger::before {
+    .header #hamburger::after,
+    .header #hamburger::before {
       content: "";
       display: block;
       width: 20px;
@@ -112,13 +112,13 @@ body {
       transition: 0.3s;
       position: relative;
     }
-    #header #nav.active #hamburger {
+    .header #nav.active #hamburger {
       border-top-color: transparent;
     }
-    #header #nav.active #hamburger::before {
+    .header #nav.active #hamburger::before {
       transform: rotate(135deg);
     }
-    #header #nav.active #hamburger::after {
+    .header #nav.active #hamburger::after {
       transform: rotate(-135deg);
       top: -7px;
     }
