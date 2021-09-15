@@ -94,77 +94,28 @@
           <section class="third-contp2">
             <h2>Produtos</h2>
             <article class="container">
-                
-              <div class="card">
+              <div class="card-body">
                 <img
-                  class="card-img-top"
-                  src="https://blog.novasafra.com.br/wp-content/uploads/2019/01/264597-aprenda-como-fazer-chocotone-e-por-que-investir-nesse-produto.jpg"
-                  alt="Card image cap"
+                  src="src/img/chocotone.png"
+                  alt=""
                 />
-                <div class="card-body">
+                <div class="card-inf">
                   <h5>Chocotone</h5>
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting
-                    industry. Lorem Ipsum
-                  </p>
+                  <p>O melhor chocotone feito com amor e gotas de chocolate</p>
                 </div>
                 <div class="card-footer">
-                  <p>R$ 10,00</p>
+                  <p>
+                    <span id="price">R$ 10,00</span>
+                  </p>
                   <div class="quantity">
                     <button id="sub">-</button>
                     <input type="text" id="qtyBox" value="0" />
                     <button id="add">+</button>
+                    <img src="src/img/icon-carrinho.png" alt="" />
                   </div>
                 </div>
-              </div>
-              <div class="card">
-                <img
-                  class="card-img-top"
-                  src="https://blog.novasafra.com.br/wp-content/uploads/2019/01/264597-aprenda-como-fazer-chocotone-e-por-que-investir-nesse-produto.jpg"
-                  alt="Card image cap"
-                />
-                <div class="card-body">
-                  <h5>Chocotone</h5>
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting
-                    industry. Lorem Ipsum
-                  </p>
-                </div>
-                <div class="card-footer">
-                  <p>R$ 10,00</p>
-                  <div class="quantity">
-                    <button id="sub">-</button>
-                    <input type="text" id="qtyBox" value="0" />
-                    <button id="add">+</button>
-                  </div>
-                </div>
-              </div>
-                  <div class="card">
-                    <img
-                      class="card-img-top"
-                      src="https://blog.novasafra.com.br/wp-content/uploads/2019/01/264597-aprenda-como-fazer-chocotone-e-por-que-investir-nesse-produto.jpg"
-                      alt="Card image cap"
-                    />
-                    <div class="card-body">
-                      <h5>Chocotone</h5>
-                      <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting
-                        industry. Lorem Ipsum
-                      </p>
-                    </div>
-                    <div class="card-footer">
-                      <p>R$ 10,00</p>
-                      <div class="quantity">
-                        <button id="sub">-</button>
-                        <input type="text" id="qtyBox" value="0" />
-                        <button id="add">+</button>
-                      </div>
-                    </div>
-                  </div>
-              
-                  <br />
-              
-                
+              </div>  
+
             </article>
             <a href="">mais produtos</a>
         </section>
@@ -207,8 +158,7 @@
         </div>
             <div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Suscipit adipisci commodi maiores officia est aliquam. Lorem ipsum 
-                dolor sit amet consectetur adipisicing elit.</p>
+                Suscipit adipisci commodi maiores officia est aliquam.</p>
             </div>
         </div>
         <div class="body mySlides">
@@ -253,9 +203,7 @@
             <div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Suscipit adipisci commodi maiores officia est aliquam. Lorem ipsum 
-                    dolor sit amet consectetur adipisicing elit. Praesentium perferendis 
-                    temporibus reprehenderit ipsa magni quo autem molestias quia quibusdam 
-                    </p>
+                    dolor sit amet consectetur adipisicing elit.</p>
             </div>
         </div>
       
@@ -349,6 +297,8 @@
                         qty.value = parseInt(qty.value) -1;
                       }
                     });
+
+                    
 
  /*Menu Hamburguer*/
 const btnMobile = document.getElementById("btn-mobile");
