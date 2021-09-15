@@ -1,6 +1,8 @@
 * {
     margin: 0;
     padding: 0;
+    list-style: none;
+    text-decoration: none;
 }
 body {
     font-family: 'Roboto', sans-serif;
@@ -211,6 +213,18 @@ body {
     margin: 0 auto;
     text-align: center;
 }
+@media (max-width: 600px) {
+
+    .third-cont{
+        margin: 0 auto;
+        padding: 10px 0px;
+        /* background-color: orange; */
+        width: 100%;
+    }
+    .third-cont .third-contp2 {
+        max-width: 600px;
+    }
+}
 .third-cont .third-contp2 h2 {
     font-size: 48px;
     text-align: center;
@@ -239,51 +253,83 @@ body {
      justify-content: space-between;
 }
 
-.third-cont .third-contp2 .container .card {
-    text-align: left;
-    margin: 5px auto;
-    max-width: 280px;
+.third-cont .third-contp2 .container .card-body {
+    font-family: sans-serif;
+    max-width: 250px;
+    height: 305px;
+    display: block;
     background-color: #ffd000;
-    border-radius: 0px 0px 0px 0px;
-  }
-.third-cont .third-contp2 .container .card .card-body p {
-    font-size: 12px;
-  }
-.third-cont .third-contp2 .container .card .card-footer {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    padding: 0;
+    margin: 0 auto;
     border: none;
-    background-color: #ffd000;
   }
-.third-cont .third-contp2 .container .card .card-footer p {
-    /* background-color: slateblue; */
-    font-size: 18px;
-    font-weight: bold;
+  .third-cont .third-contp2 .container  .card-body img {
+    width: 100%;
   }
   
-.third-cont .third-contp2 .container .quantity {
-    display: flex;
-    justify-content: center;
+  .third-cont .third-contp2 .container  .card-body .card-inf {
+    width: 220px;
+    text-align: left;
+    margin: 0 auto;
+    margin-top: 3px;
+    line-height: 20px;
+    padding: 0px 2px;
   }
-.third-cont .third-contp2 .container .quantity button {
-    width: 45px;
-    height: 45px;
-    border: 1px solid #000;
-    color: #000;
-    border-radius: 0;
-    background-color: #fff;
+  .third-cont .third-contp2 .container  .card-body .card-inf h5 {
+    font-size: 24px;
+    font-weight: 700;
+    width: 220px;
   }
-.third-cont .third-contp2 .container  .quantity input {
+  .third-cont .third-contp2 .container  .card-body .card-inf p {
+    font-size: 14px;
+    text-align: left;
+    margin: 0;
+    width: 220px;
+  }
+  .third-cont .third-contp2 .container  .card-body .card-footer {
     border: none;
     background: none;
-    text-align: center;
-    width: 60px;
+    margin: 0 auto;
+    width: 220px;
+    align-content: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+  }
+  .third-cont .third-contp2 .container  .card-body .card-footer p {
+    margin: auto 0;
+    display: flex;
+    font-size: 20px;
+    color: #000;
+    font-weight: 700;
+  }
+  .third-cont .third-contp2 .container  .card-body .card-footer .quantity {
+    border: solid 1px black;
+    border-radius: 10px;
+    line-height: 5px;
+  }
+  .third-cont .third-contp2 .container  .card-body .card-footer .quantity input {
+    border: none;
+    background: none;
+    width: 20px;
     font-size: 20px;
     color: #000;
     font-weight: 300;
+    text-align: center;
   }
-  
+  .third-cont .third-contp2 .container  .card-body .card-footer .quantity button {
+    width: 20px;
+    border: none;
+    color: #000;
+    border-radius: 0;
+    background: none;
+  }
+  .third-cont .third-contp2 .container  .card-body .card-footer .quantity img {
+    background-color: #533375;
+    padding: 5px;
+    width: 35px;
+    border-radius: 0px 9px 9px 0px;
+  }
 
 /* final do TERCEIRO-CONTAINER */
 
@@ -313,7 +359,12 @@ body {
 }
 .fourth-cont .container img {
     width: 350px
-    
+}
+@media (max-width: 600px) {
+    .fourth-cont .container img {
+        width: 350px;
+        margin: 0 auto;
+    }
 }
 .fourth-cont .container h2 {
     font-size: 48px;
@@ -386,7 +437,8 @@ body {
 }
 .slides .body {
     background-color: rgb(247, 240, 240);
-    max-width: 45vw;
+    width: 500px;
+    height: 200px;
     margin: 0 auto;
     padding: 25px 20px;
     border-radius: 3px;
@@ -458,6 +510,8 @@ body {
     margin: 5px 10px;
     border-style: none;   
     padding: 10px; 
+    background: none;
+    color: #FFD000;
 }
 
 /* Começo do FOOTER */
@@ -542,3 +596,106 @@ footer .container div ol li a {
     text-decoration: none;
     text-transform: uppercase;
 }
+
+
+/*html.carrinho*/
+
+.title-pag {
+    max-width: 400px;
+    display: block;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .title-pag h1 {
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  
+  .title-pag h1::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 2px;
+    background-color: black;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .container-carrinho {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 10px 10px;
+    background-color: #fcfcfc;
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 0.5px solid rgb(226, 226, 226);
+  }
+  .container-carrinho .lado-D {
+    /* background-color: beige; */
+    width: 250px;
+    margin-left: 100px;
+  }
+  .container-carrinho .lado-E .card-body2 {
+    font-family: sans-serif;
+    max-width: 440px;
+    height: 162px;
+    display: flex;
+    background-color: #ffd000;
+  }
+  .container-carrinho .lado-E .card-body2 img {
+    width: 220px;
+    height: 162px;
+  }
+  .container-carrinho .lado-E .card-body2 .card-inf {
+    width: 220px;
+    padding: 45px 20px;
+  }
+  .container-carrinho .lado-E .card-body2 .card-inf h5 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .container-carrinho .lado-E .card-body2 .card-inf p {
+    font-size: 12px;
+    width: 162px;
+  }
+  .container-carrinho .lado-D .subcont {
+    /* background-color: #533375; */
+    display: flex;
+    justify-content: space-between;
+  }
+  .container-carrinho .lado-D .subcont .primeiro-subcont .quantity {
+    border: none;
+    line-height: 5px;
+    background-color: #c1c1c1;
+    text-align: center;
+    width: 100px;
+  }
+  .container-carrinho .lado-D .subcont .primeiro-subcont .quantity input {
+    border: none;
+    background: none;
+    width: 20px;
+    font-size: 20px;
+    color: #000;
+    font-weight: 300;
+    text-align: center;
+  }
+  .container-carrinho .lado-D .subcont .primeiro-subcont .quantity button {
+    width: 20px;
+    border: none;
+    color: #000;
+    border-radius: 0;
+    background: none;
+  }
+  .container-carrinho .lado-D .subcont .primeiro-subcont .subcont-opc {
+    width: 100px;
+    /* background-color: #ffd000; */
+    text-align: center;
+    font-weight: lighter;
+  }
+  .container-carrinho .lado-D .subcont .primeiro-subcont .subcont-opc a {
+    color: #000;
+    font-size: 12px;
+  }
+  
