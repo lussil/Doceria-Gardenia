@@ -6,6 +6,7 @@
 }
 body {
     font-family: 'Roboto', sans-serif;
+    text-decoration: none;
 }
 
 /* Começo do HEADER */
@@ -301,13 +302,18 @@ body {
     font-size: 16px;
     border-radius: 20px 20px 20px 20px;
     background-color: #533375;
-    color: #FFD000;
+}
+.fourth-cont .container button a {
+  text-decoration: none;
+  color: #FFD000;
 }
 .fourth-cont .container button:hover {
     transition: 0.3s;
-    color: #533375;
     background-color: #FFD000;
     font-weight: bold;
+}
+.fourth-cont .container button a:hover {
+  color: #533375;
 }
 
 /* final do QUARTO CONTAINER */
